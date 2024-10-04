@@ -6,6 +6,7 @@ import * as path from 'path';
 import * as os from "os";
 import * as QrCode from 'qrcode';
 import { data } from './interfaces/factura';
+import { Readable } from 'stream';
 
 const sat = `https://verificacfdi.facturaelectronica.sat.gob.mx/default.aspx`
 @Injectable()
@@ -32,7 +33,7 @@ export class AppService {
         });
   }
 
-  async generateInvoice(data: data): Promise<any> {
+  async generateInvoice(data: data): Promise<Readable> {
     data.total = data.total.toFixed(2) as any;
 
     // Define assets directory
@@ -90,7 +91,11 @@ export class AppService {
     // Close the page after generating the PDF
     await page.close();
     
-    return pdfPath; // Return the path where the invoice was saved
+    const stream = new Readable(); 
+    stream.push(pdfBuffer);
+    stream.push(null);
+
+    return stream;
 }
 
 
