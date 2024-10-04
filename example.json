@@ -1,0 +1,79 @@
+{
+    "serie": "ACFA",
+    "folio": 1,
+    "fecha": "2024-09-30T12:00:00",
+    "sello": "HUaRhtQdMWI8eL2Ogc6vHjhQMxzrvlajDpqVCPA1KC7cojN60ahtYiAE7ALKq2mAtX3818ZtoT5D4t5lKSAkMvXeSNI/J09OC+O0HYKD6n3XYbKMj2ndoSU+EUhkOwwFbA728ua7SsyV7u7XhC/YpFHWNdk0TMXPHb0IQA57OiRrR0DkHfgOnLJwjMFAj8CafW5l88YVnNpCijYXtQGsP7mxFbSzbWKQi84FrDl2bNyzwzfwgl5uWRtrTNqk7tG2ooKkzed7RImt7YTwkJGAjrJkGW8Vmvdj02P/SKoxWW7/PGuasnUf4o0CG0JyXqUq0TBOHlYLx4/ys22AjEPsTw==",
+    "formapago": "PPD PAGO EN PARCIALIDADES",
+    "numcertificado": "00001000000505622166",
+    "certificado": "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",
+    "moneda": "MXN PESOS MEXICANOS",
+    "subtotal": 862.07,
+    "total": 1000,
+    "tipocomprobante": "E",
+    "metodopago": "01 EFECTIVO",
+    "lugarexpedicion": "97000",
+    "emisor": {
+        "rfc": "MDS870209190",
+        "nombre": "MUEBLERIA DIAZ Y SOLIS",
+        "regimenfiscal": "601 PERSONAS MORALES"
+    },
+    "receptor": {
+        "rfc": "XXXX01010100",
+        "nombre": "MANUEL FRANCO ESCAMILLA",
+        "regimenfiscal": "616 SIN EFECTOS FISCALES",
+        "codigopostal": "97284",
+        "direccion": "CALLE 15 x 20 y 22 COL: LA PLAZA",
+        "ciudad": "ACANCEH"
+    },
+    "conceptos": [
+        {
+            "claveprodservicio": "56101500",
+            "cantidad": 1,
+            "claveunidad": "H87",
+            "unidad": "PIEZA",
+            "descripcion": "VENT.20\" PISO MAN FREAL 2020",
+            "valorunitario": 862.07,
+            "importe": 862.07,
+            "objetoimpuesto": "02",
+            "impuestos": {
+                "traslados": [
+                    {
+                        "base": 16,
+                        "impuesto": "002",
+                        "tipofactor": "Tasa",
+                        "tasaocuota": 0.16,
+                        "importe": 137.9312
+                    }
+                ]
+            }
+        }
+    ],
+    "impuestos": {
+        "totalimpuestostrasladados": 137.93,
+        "traslados": [
+            {
+                "base": 862.07,
+                "impuesto": "002",
+                "tipofactor": "Tasa",
+                "tasaocuota": 0.16,
+                "importe": 137.93
+            }
+        ]
+    },
+    "complemento": {
+        "uuid": "0c5aedf6-fe39-4bc4-8530-4a67c25ae38e",
+        "fechatimbrado": "2024-09-05T18:24:20",
+        "rfcprovcert": "LSO1306189R5",
+        "sellocfd": "HUaRhtQdMWI8eL2Ogc6vHjhQMxzrvlajDpqVCPA1KC7cojN60ahtYiAE7ALKq2mAtX3818ZtoT5D4t5lKSAkMvXeSNI/J09OC+O0HYKD6n3XYbKMj2ndoSU+EUhkOwwFbA728ua7SsyV7u7XhC/YpFHWNdk0TMXPHb0IQA57OiRrR0DkHfgOnLJwjMFAj8CafW5l88YVnNpCijYXtQGsP7mxFbSzbWKQi84FrDl2bNyzwzfwgl5uWRtrTNqk7tG2ooKkzed7RImt7YTwkJGAjrJkGW8Vmvdj02P/SKoxWW7/PGuasnUf4o0CG0JyXqUq0TBOHlYLx4/ys22AjEPsTw==",
+        "nocertificadosat": "00001000000509846663",
+        "sellosat": "RocjNvQVBodgvYbO9BzaNQsUR30LAwWDpgZZ3XMBos7lPQ87vVOMVIxGjlxjANoDw7z77m+y7QOOcmebgW6gDjhJ83Cj2+ar3/j6fnLYR2W64J6QNKq+Ln2BRa3WbYEsIlPJGs8funHf605yjYvFzbAFTd8fkGMjmQFeVJFMeHpHh9DTl7UChmfQfEbSeOUjp/XJYULAsNgc9D5p3ZDeTo2m8fEe31bD9XInXD1xWs0AL8aw9+EJYooDJNaYjl+SvO4rhcxUMd+z30bJ8d2IpOLmBNg6IWF30p/GkSqQ/EEO1FB0nq5v08fWM7VTT0lxZmxXDtWVA6zfyj53zsmGXA=="
+    },
+    "formatos": {
+        "modo": "EMAIL",
+        "observaciones": [
+            "POR ESTE CONDUCTO CEDO LOS DERECOS DE LA PRESENTE FACTURA A BANOBRAS S.N.C INSTITUCION FIDUCIARIA EN EL FIDEICOMISO 724 POSTERA QUEDANDO BANOBRAS SNC EN PODER DE DICHA FACTURA HASTA EN TANTO NO SEA CUBIERTO EN SU TOTALIDAD EL FINANCIAMIENTO QUE SE ME HA OTORGADO, ENSODO MANUALMENTE LA FACTURA Y AUTORIZO A BANOBRAS SNC INSTITUCION FIDUCIARIA EN EL FIDEICOMISO 724 POSTERA ",
+        "cliente asi 23480"
+        ],
+        "email": "tronxx@gmail.com"
+    }
+}

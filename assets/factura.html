@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- related to the invoice header -->
+    <header>
+        <div class="row">
+            <div class="logo">
+                <img src="./logo_mds_amarillo.png" alt="">
+            </div>
+            <div class="information">
+                <div class="field">
+                    <div class="legend">
+                        Serie
+                    </div>
+                    <div class="data">
+                        {{serie}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Folio
+                    </div>
+                    <div class="data">
+                        {{folio}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Fecha y Hora
+                    </div>
+                    <div class="data">
+                        {{fecha}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Forma de pago
+                    </div>
+                    <div class="data">
+                        {{formapago}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Número de certificado
+                    </div>
+                    <div class="data">
+                        {{numcertificado}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                Emisor
+            </div>
+            <div class="body">
+                <div class="field">
+                    <div class="legend">
+                        RFC
+                    </div>
+                    <div class="data">
+                        {{rfc}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Nombre
+                    </div>
+                    <div class="data">
+                        {{nombre}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Regimen Fiscal
+                    </div>
+                    <div class="data">
+                        {{regimentfiscal}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                Receptor
+            </div>
+            <div class="body">
+                <div class="field">
+                    <div class="legend">
+                        RFC
+                    </div>
+                    <div class="data">
+                        {{rfc}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Nombre
+                    </div>
+                    <div class="data">
+                        {{nombre}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Regimen Fiscal
+                    </div>
+                    <div class="data">
+                        {{regimenfiscal}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Codigo postal
+                    </div>
+                    <div class="data">
+                        {{codigopostal}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Dirección
+                    </div>
+                    <div class="data">
+                        {{direccion}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Ciudad
+                    </div>
+                    <div class="data">
+                        {{ciudad}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--  -->
+
+    <!-- STYLING: INGORE FROM HERE -->
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .row {
+            display: flex;
+            padding: .5ch;
+        }
+
+        .row .logo {
+            width: 50%;
+            display: grid;
+            place-content: center;
+        }
+
+        .row .logo img {
+            max-width: 200px;
+            object-fit: contain;
+        }
+
+        .information {
+            border: 1px solid black;
+            width: 50%;
+        }
+
+        .field {
+            display: flex;
+            border: 1px solid black;
+        }
+
+        .field .legend {
+            width: 50%;
+            display: grid;
+            place-content: center;
+            background: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        .field .data {
+            width: 50%;
+            display: grid;
+            place-content: center;
+        }
+
+        .content{
+            padding: .5ch;
+        }
+
+        .content .header{
+            background: black;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+    </style>
+</body>
+
+</html>
+
+<!-- template for fields -->
+<!-- 
+    <div class="data-field">
+        <div class="field-legend">
+
+        </div>
+        <div class="field-data">
+
+        </div>
+    </div> 
+-->

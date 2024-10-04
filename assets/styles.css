@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+}
+
+.row{
+    display: flex;
+    padding: .5ch;
+}
+
+.row .logo{
+    width: 50%;
+    display: grid;
+    place-content: center;
+}
+
+.row .logo img{
+    max-width: 80%;
+    object-fit: contain;
+}
+
+.information{
+    border: 1px solid black;
+    width: 50%;
+}
+
+.field{
+    display: flex;
+    border: 1px solid black;
+}
+
+.field .legend{
+    width: 50%;
+    display: grid;
+    place-content: center;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+.field .data{
+    width: 50%;
+    display: grid;
+    place-content: center;
+}

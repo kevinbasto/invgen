@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    container_name: invgen
+    volumes:
+      - ~/temp/:/usr/src/app/invoices

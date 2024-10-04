@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- related to the invoice header -->
+    <header>
+        <div class="row">
+            <div class="logo">
+                <img src="{{logo}}" alt="LOGO">
+            </div>
+            <div class="information">
+                <div class="field">
+                    <div class="legend">
+                        Serie
+                    </div>
+                    <div class="data">
+                        {{serie}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Folio
+                    </div>
+                    <div class="data">
+                        {{folio}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Fecha y Hora
+                    </div>
+                    <div class="data">
+                        {{fecha}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Forma de pago
+                    </div>
+                    <div class="data">
+                        {{formapago}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Número de certificado
+                    </div>
+                    <div class="data">
+                        {{numcertificado}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="header">
+                Emisor
+            </div>
+            {{#with emisor}}
+            <div class="body">
+                <div class="field">
+                    <div class="legend">
+                        RFC
+                    </div>
+                    <div class="data">
+                        {{rfc}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Nombre
+                    </div>
+                    <div class="data">
+                        {{nombre}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Regimen Fiscal
+                    </div>
+                    <div class="data">
+                        {{regimentfiscal}}
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+        <div class="content">
+            <div class="header">
+                Receptor
+            </div>
+            {{#with receptor}}
+            <div class="body">
+                <div class="field">
+                    <div class="legend">
+                        RFC
+                    </div>
+                    <div class="data">
+                        {{rfc}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Nombre
+                    </div>
+                    <div class="data">
+                        {{nombre}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Regimen Fiscal
+                    </div>
+                    <div class="data">
+                        {{regimenfiscal}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Codigo postal
+                    </div>
+                    <div class="data">
+                        {{codigopostal}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Dirección
+                    </div>
+                    <div class="data">
+                        {{direccion}}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="legend">
+                        Ciudad
+                    </div>
+                    <div class="data">
+                        {{ciudad}}
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </header>
+
+    <!--  -->
+    <div class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Clave
+                    </th>
+                    <th>
+                        Cantidad
+                    </th>
+                    <th>
+                        Clave de unidad
+                    </th>
+                    <th>
+                        Unidad
+                    </th>
+                    <th>
+                        Descripcion
+                    </th>
+                    <th>
+                        Valor unitario
+                    </th>
+                    <th>
+                        Importe
+                    </th>
+                    <th>
+                        Objeto Impuesto
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each conceptos}}
+                <tr>
+                    <td> {{claveprodservicio}} </td>
+                    <td> {{cantidad}} </td>
+                    <td> {{claveunidad}} </td>
+                    <td> {{unidad}} </td>
+                    <td> {{descripcion}} </td>
+                    <td> ${{valorunitario}} </td>
+                    <td> ${{importe}} </td>
+                    <td> {{objetoimpuesto}} </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <div class="field">
+            <div class="legend">
+                Cantidad con letras:
+            </div>
+            <div class="data">
+                ***
+                {{letras}} Pesos Mxn
+                ***
+            </div>
+        </div>
+        {{#with impuestos}}
+        <div class="traslados">
+            <div class="header" style="margin: 0;">
+                Impuestos Trasladados
+            </div>
+            {{#each traslados}}
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Base
+                        </th>
+                        <th>
+                            Impuesto
+                        </th>
+                        <th>
+                            Tipo Factor
+                        </th>
+                        <th>
+                            Tasa Cuota
+                        </th>
+                        <th>
+                            Importe
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+
+                        <td>
+                            {{base}}
+                        </td>
+                        <td>
+                            {{impuesto}}
+                        </td>
+                        <td>
+                            {{tipofactor}}
+                        </td>
+                        <td>
+                            {{tasaocuota}}
+                        </td>
+                        <td>
+                            ${{importe}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            {{/each}}
+        </div>
+        {{/with}}
+        <div class="tfooter">
+            <div class="field tax">
+                <div class="legend">
+                    Subtotal
+                </div>
+                <div class="data">
+                    ${{subtotal}}
+                </div>
+            </div>
+            <div class="field tax">
+                <div class="legend">
+                    Impuesto
+                </div>
+                <div class="data">
+                    ${{impuestos.totalimpuestostrasladados}}
+                </div>
+            </div>
+            <div class="field tax">
+                <div class="legend">
+                    Total
+                </div>
+                <div class="data">
+                    ${{total}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="legal">
+        <div class="information">
+            <div class="field">
+                <div class="legend">Sello digital del que lo expide</div>
+                <div class="data">{{sello}}</div>
+            </div>
+            <div class="field">
+                <div class="legend">Certificado</div>
+                <div class="data">{{certificado}}</div>
+            </div>
+            <div class="field">
+                <div class="legend">Número de certificado</div>
+                <div class="data">{{numcertificado}}</div>
+            </div>
+        </div>
+        <div class="qr">
+            <img src="{{qrcontent}}" alt="Código QR">
+        </div>
+    </div>
+    <!-- STYLING: INGORE FROM HERE -->
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .row {
+            display: flex;
+            padding: .5ch;
+        }
+
+        .row .logo {
+            width: 50%;
+            display: grid;
+            place-content: center;
+        }
+
+        .row .logo img {
+            max-width: 250px;
+            object-fit: contain;
+        }
+
+        .information {
+            border: 1px solid gray;
+            width: 50%;
+        }
+
+        .field {
+            display: flex;
+            border: 1px solid gray;
+        }
+
+        .field .legend {
+            width: 50%;
+            display: grid;
+            place-content: center;
+            background: gray;
+            color: black;
+            font-weight: bold;
+        }
+
+        .field .data {
+            width: 50%;
+            display: grid;
+            place-content: center;
+        }
+
+        .content {
+            padding: .5ch;
+        }
+
+        .content .header {
+            background: gray;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1ch;
+        }
+
+        .content .body {
+            display: flex;
+            flex-direction: column;
+            gap: .5ch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px 0;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        thead tr {
+            background-color: #f2f2f2;
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 6px;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        th {
+            background-color: gray;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        .tfooter {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .tax {
+            width: 50%;
+            margin-left: 50%;
+        }
+
+        .traslados {
+            width: 100%;
+        }
+
+        .legal {
+            width: 100%;
+            display: flex;
+        }
+        .legal .information{
+            width: 80%;
+        }
+
+        .information .field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .information .field .legend {
+            width: 100%;
+        }
+
+        .information .field .data {
+            word-break: break-all;
+            font-size: 1ch;
+            width: 100%;
+        }
+    </style>
+</body>
+
+</html>
+
+<!-- template for fields -->
+<!-- 
+    <div class="data-field">
+        <div class="field-legend">
+
+        </div>
+        <div class="field-data">
+
+        </div>
+    </div> 
+-->
