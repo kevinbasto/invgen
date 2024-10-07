@@ -22,5 +22,5 @@ COPY package*.json ./
 COPY assets ./assets
 RUN npm install --only=production
 RUN rm package*.json 
-EXPOSE 3000
+EXPOSE 3100
 CMD ["node", "dist/main.js"]
