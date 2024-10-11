@@ -1,44 +1,41 @@
-body{
-    margin: 0;
-}
-
-.row{
+.invoice-header {
     display: flex;
-    padding: .5ch;
+    gap: 1rem;
 }
 
-.row .logo{
+.invoice-header img {
     width: 50%;
-    display: grid;
-    place-content: center;
-}
-
-.row .logo img{
-    max-width: 80%;
     object-fit: contain;
 }
 
-.information{
-    border: 1px solid black;
-    width: 50%;
+.invoice-header table {}
+
+table {
+    border-collapse: collapse;
+    /* Para unir los bordes de las celdas */
 }
 
-.field{
-    display: flex;
+table, th, td {
     border: 1px solid black;
+    /* Líneas negras */
 }
 
-.field .legend{
-    width: 50%;
-    display: grid;
-    place-content: center;
-    background: black;
-    color: white;
+table thead tr th{
+    background: #777;
+    font-weight: bolder;
+}
+
+table tbody tr td:first-child{
+    background-color: #777;
     font-weight: bold;
 }
 
-.field .data{
-    width: 50%;
-    display: grid;
-    place-content: center;
+.body table tbody tr td:first-child{
+    background: white;
+    font-weight: initial;
+}
+
+.body .tfooter table tbody tr td:first-child{
+    background: #777;
+    font-weight: initial;
 }

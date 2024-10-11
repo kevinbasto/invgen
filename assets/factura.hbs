@@ -10,42 +10,40 @@
 <body>
     <!-- related to the invoice header -->
     <header>
-        <div class="row">
+        <div class="invoice-header">
             <div class="logo">
                 <img src="{{logo}}" alt="LOGO">
             </div>
-            <div class="invoice-header">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td> Serie </td>
-                            <td> {{serie}} </td>
-                        </tr>
-                        <tr>
-                            <td> Folio </td>
-                            <td> {{serie}} </td>
-                        </tr>
-                        <tr>
-                            <td> Fecha y Hora </td>
-                            <td> {{fecha}} </td>
-                        </tr>
-                        <tr>
-                            <td> Forma de pago </td>
-                            <td> {{formapago}} </td>
-                        </tr>
-                        <tr>
-                            <td> Número de certificado </td>
-                            <td> {{numcertificado}} </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> Serie </td>
+                        <td> {{serie}} </td>
+                    </tr>
+                    <tr>
+                        <td> Folio </td>
+                        <td> {{serie}} </td>
+                    </tr>
+                    <tr>
+                        <td> Fecha y Hora </td>
+                        <td> {{fecha}} </td>
+                    </tr>
+                    <tr>
+                        <td> Forma de pago </td>
+                        <td> {{formapago}} </td>
+                    </tr>
+                    <tr>
+                        <td> Número de certificado </td>
+                        <td> {{numcertificado}} </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div class="content">
             <table>
                 <thead>
                     <tr>
-                        <th>
+                        <th colspan="2">
                             Emisor
                         </th>
                     </tr>
@@ -70,7 +68,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>
+                        <th colspan="2">
                             Receptor
                         </th>
                     </tr>
@@ -133,26 +131,27 @@
                     <td> {{objetoimpuesto}} </td>
                 </tr>
                 {{/each}}
+                <tr>
+                    <td colspan="2" style="background-color: #777; font-weight: bold;">
+                        Cantidad con letras:
+                    </td>
+                    <td colspan="6" style="text-align: center;">
+                        ***
+                        <b> {{letras}} </b>
+                        Pesos Mxn
+                        ***
+                    </td>
+                </tr>
             </tbody>
         </table>
-        <div class="field">
-            <div class="legend">
-                Cantidad con letras:
-            </div>
-            <div class="data">
-                ***
-                {{letras}} Pesos Mxn
-                ***
-            </div>
-        </div>
         {{#with impuestos}}
         <div class="traslados">
-            <div class="header" style="margin: 0;">
-                Impuestos Trasladados
-            </div>
-            <!-- {{#each traslados}} -->
+            {{#each traslados}}
             <table>
                 <thead>
+                    <tr>
+                        <th colspan="5"> Impuestos Trasladados </th>
+                    </tr>
                     <tr>
                         <th> Base </th>
                         <th> Impuesto </th>
@@ -173,32 +172,24 @@
             </table>
             {{/each}}
         </div>
-        <!-- {{/with}} -->
+        {{/with}}
         <div class="tfooter">
-            <div class="field tax">
-                <div class="legend">
-                    Subtotal
-                </div>
-                <div class="data">
-                    ${{subtotal}}
-                </div>
-            </div>
-            <div class="field tax">
-                <div class="legend">
-                    Impuesto
-                </div>
-                <div class="data">
-                    ${{impuestos.totalimpuestostrasladados}}
-                </div>
-            </div>
-            <div class="field tax">
-                <div class="legend">
-                    Total
-                </div>
-                <div class="data">
-                    ${{total}}
-                </div>
-            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td> Subtotal </td>
+                        <td> ${{subtotal}} </td>
+                    </tr>
+                    <tr>
+                        <td> Impuesto </td>
+                        <td> ${{subtotal}} </td>
+                    </tr>
+                    <tr>
+                        <td> Total </td>
+                        <td> ${{total}} </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
@@ -216,23 +207,146 @@
                 <div class="legend">Número de certificado</div>
                 <div class="data">{{numcertificado}}</div>
             </div>
+            <div class="field">
+                <div class="legend">
+                    Observaciones
+                </div>
+                {{#with formatos}}
+                <div class="data">
+                    {{observaciones}}
+                </div>
+                {{/with}}
+            </div>
         </div>
         <div class="qr">
             <img src="{{qrcontent}}" alt="Código QR">
         </div>
     </div>
-    <div class="observaciones">
-        <div class="header">
-            Observaciones
-        </div>
-        {{#with formatos}}
-        <p>
-            {{observaciones}}
-        </p>
-        {{/with}}
-    </div>
     <style>
-        
+        .invoice-header {
+            display: flex;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .invoice-header img {
+            width: 50%;
+            object-fit: contain;
+        }
+
+        .invoice-header table {
+            width: 50%;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .content table {
+            width: 50%;
+            height: 200px;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* Para unir los bordes de las celdas */
+        }
+
+
+        table thead tr th {
+            background: #777;
+            font-weight: bolder;
+        }
+
+        table tbody tr td:first-child {
+            background-color: #777;
+            font-weight: bold;
+        }
+
+        .body {
+            margin-bottom: 1rem;
+        }
+
+        .body table {
+            width: 100%;
+        }
+
+        .body table tbody tr td:first-child {
+            background: white;
+            font-weight: initial;
+        }
+
+        .body .tfooter table tbody tr td:first-child {
+            background: #777;
+            font-weight: initial;
+        }
+
+        .traslados {
+            margin-top: 1rem;
+        }
+
+        .tfooter {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .tfooter table {
+            width: 30%;
+        }
+
+        .tfooter table tr td:first-child {
+            text-align: end;
+        }
+
+        .tfooter table td {
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            /* Líneas negras */
+        }
+
+        .legal {
+            display: flex;
+        }
+
+        .legal .information {
+            width: 70%;
+        }
+
+        .legal .information .field .legend{
+            background: #777;
+            font-weight: bold;
+            border: 1px solid #777;
+        }
+
+        .legal .information .field .data{
+            word-break: break-all;
+            font-size: .5ch;
+            border: 1px solid #777;
+        }
+
+        .legal .qr {
+            width: 30%
+        }
+
+        .legal .qr img{
+            width: 100%;
+            object-fit: contain;
+        }
     </style>
 </body>
 
