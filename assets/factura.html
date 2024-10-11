@@ -154,41 +154,20 @@
             <table>
                 <thead>
                     <tr>
-                        <th>
-                            Base
-                        </th>
-                        <th>
-                            Impuesto
-                        </th>
-                        <th>
-                            Tipo Factor
-                        </th>
-                        <th>
-                            Tasa Cuota
-                        </th>
-                        <th>
-                            Importe
-                        </th>
+                        <th> Base </th>
+                        <th> Impuesto </th>
+                        <th> Tipo Factor </th>
+                        <th> Tasa Cuota </th>
+                        <th> Importe</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-
-                        <td>
-                            {{base}}
-                        </td>
-                        <td>
-                            {{impuesto}}
-                        </td>
-                        <td>
-                            {{tipofactor}}
-                        </td>
-                        <td>
-                            {{tasaocuota}}
-                        </td>
-                        <td>
-                            ${{importe}}
-                        </td>
+                        <td> {{base}} </td>
+                        <td> {{impuesto}} </td>
+                        <td> {{tipofactor}} </td>
+                        <td> {{tasaocuota}} </td>
+                        <td> ${{importe}} </td>
                     </tr>
                 </tbody>
             </table>
@@ -243,23 +222,18 @@
         </div>
     </div>
     <div class="observaciones">
-        
+        <div class="header">
+            Observaciones
+        </div>
+        {{#with formatos}}
+        <p>
+            {{observaciones}}
+        </p>
+        {{/with}}
     </div>
     <style>
-
+        
     </style>
 </body>
 
 </html>
-
-<!-- template for fields -->
-<!-- 
-    <div class="data-field">
-        <div class="field-legend">
-
-        </div>
-        <div class="field-data">
-
-        </div>
-    </div> 
--->
