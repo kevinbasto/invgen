@@ -138,8 +138,8 @@
                     <td> {{claveunidad}} </td>
                     <td> {{unidad}} </td>
                     <td> {{descripcion}} </td>
-                    <td> ${{valorunitario}} </td>
-                    <td> ${{importe}} </td>
+                    <td style="text-align: end;"> ${{valorunitario}} </td>
+                    <td style="text-align: end;"> ${{importe}} </td>
                     <td> {{objetoimpuesto}} </td>
                 </tr>
                 {{/each}}
@@ -150,7 +150,6 @@
                     <td colspan="6" style="text-align: center;">
                         ***
                         <b> {{letras}} </b>
-                        Pesos Mxn
                         ***
                     </td>
                 </tr>
@@ -174,11 +173,11 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td> {{base}} </td>
+                        <td style="text-align: end;"> ${{base}} </td>
                         <td> {{impuesto}} </td>
                         <td> {{tipofactor}} </td>
                         <td> {{tasaocuota}} </td>
-                        <td> ${{importe}} </td>
+                        <td style="text-align: end;"> ${{importe}} </td>
                     </tr>
                 </tbody>
             </table>
@@ -190,17 +189,17 @@
                 <tbody>
                     <tr>
                         <td> Subtotal </td>
-                        <td align="right"> ${{subtotal}} </td>
+                        <td align="right" style="text-align: end;"> ${{subtotal}} </td>
                     </tr>
                     <tr>
                         {{#with impuestos}}
                         <td> Impuesto </td>
-                        <td align="right"> ${{totalimpuestostrasladados}} </td>
+                        <td align="right" style="text-align: end;"> ${{totalimpuestostrasladados}} </td>
                         {{/with}}
                     </tr>
                     <tr>
                         <td> Total </td>
-                        <td align="right"> ${{total}} </td>
+                        <td align="right" style="text-align: end;"> ${{total}} </td>
                     </tr>
                 </tbody>
             </table>

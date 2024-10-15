@@ -49,7 +49,8 @@ export class AppService {
     const dataUrl = `data:${mimeType};base64,${base64Image}`;
     
     let letras = this.numeroALetras(Math.floor(data.total));
-    letras = `${letras} ${((data.total - Math.floor(data.total)) * 100).toFixed(0)}/100`;
+    let sub = ((data.total - Math.floor(data.total)) * 100).toFixed(0);
+    letras = `${letras} Pesos ${sub  as any < 10? `0${sub}` : sub}/100  Mxn`;
     letras = letras.toUpperCase();
 
     const qrcodecontent = `${sat}?id=${data.complemento.uuid}&re=${data.emisor.rfc}&rr=${data.receptor.rfc}`;
